@@ -17,7 +17,10 @@ const Home = () => {
     <div>
     {Array.isArray(foodData) && foodData.length > 0 ? (
       foodData.map((recipe, index) => (
-        <div key={index}>{recipe.title}</div>
+        <div key={index}>
+          <img src={recipe.image}></img>
+          <p>{recipe.title}</p>
+        </div>
       ))
     ) : (
       <p>loading...</p>
